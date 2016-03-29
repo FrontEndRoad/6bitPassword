@@ -1,9 +1,13 @@
 ### 移动端6位密码输入框
+
+@[作者:Cici|时间：2016/03/29]
+
 > 做移动端项目时经常遇到6位密码框逐次输入的效果，即输入当前格子后，会自动获取下个格子焦点，直至用户输完6位密码后，自动提交后台。
 
-实现原理：使用6个格子模拟框框，一个input[type='password']定位于最上方，通过设置间距与letter-spacing值，达到值与框一一对应的效果。运用input方法，获取密码框val值的长度，与6相匹配，验证成功则密码输入完毕。
+**实现原理：**使用6个格子模拟框框，一个input[type='password']定位于最上方，通过设置间距与letter-spacing值，达到值与框一一对应的效果。运用input方法，获取密码框val值的长度，与6相匹配，验证成功则密码输入完毕。
 
 #### HTML
+
 ``` HMTL
 <div class="passContainer">
     <!-- 密码框  注意调整letter-spacing -->
@@ -19,6 +23,7 @@
 ```
 
 #### CSS
+
 ``` CSS
 .passContainer {
             border: 1px solid #ccc;
@@ -59,6 +64,7 @@
 
 
 #### JAVASCRIPT
+
 ``` javascript
 $('.password').on('input', function(){
     var v = $(this).val();
